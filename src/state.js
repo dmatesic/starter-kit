@@ -1,5 +1,6 @@
 const state = {
-  count: 0
+	dataAccess: null,
+	selectedConference: null
 };
 
 export default state;

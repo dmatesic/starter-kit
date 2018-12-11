@@ -1,9 +1,16 @@
+import DataAccess from './lib/data-access';
+
 const actions = {
-  down: value => state => {
-    return { count: state.count - value };
+  fetchData: () => async (_, actions) => {
+    const dataAccess = new DataAccess();
+    await dataAccess.init();
+    actions.fetchDataSuccess(dataAccess);
   },
-  up: value => state => {
-    return { count: state.count + value };
+  fetchDataSuccess: (dataAccess) => () => {
+    return { dataAccess };
+  },
+  setSelectedConference: (selectedConference) => () => {
+    return { selectedConference };
   }
 };
 

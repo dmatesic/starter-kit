@@ -1,6 +1,6 @@
 # starter-kit
 
-Fork this repo as a starting point for side projects, hackathons, etc.
+Fork this repo as a starting point for side projects, hackathons, etc. Decisions are documented in [ADR.md](ADR.md).
 
 ## What’s Included?
 
@@ -8,6 +8,12 @@ Fork this repo as a starting point for side projects, hackathons, etc.
 
 - [Hyperapp](https://github.com/jorgebucaran/hyperapp): 1 kB JavaScript micro-framework for building declarative web applications
 - [Tailwind CSS](https://tailwindcss.com): utility-first CSS framework for rapidly building custom user interfaces
+
+
+### Database
+
+- [Google Sheets](https://www.google.com/sheets/about/): spreadsheet program included as part of a free, web-based software office suite offered by Google within its Google Drive service
+- [tabletop](https://github.com/jsoma/tabletop): takes a Google Spreadsheet and makes it easily accessible through JavaScript
 
 ### Tooling
 
@@ -22,6 +28,7 @@ Fork this repo as a starting point for side projects, hackathons, etc.
 
 1. Fork this repo, change the name, and pull it locally
 2. Install packages: `npm i`
+3. (optional) Create a new Google Sheet, add some data, make it public, and set the `DOC_ID` in [data-access](src/lib/data-access)
 
 ### Setup VS Code
 
@@ -41,4 +48,4 @@ Fork this repo as a starting point for side projects, hackathons, etc.
 
 ## License
 
-starter-kit is open source software licensed as [MIT](LICENSE).
+starter-kit is open source software licensed as [MIT](LICENSE)
