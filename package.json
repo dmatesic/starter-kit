@@ -7,7 +7,9 @@
     "build": "npx parcel build src/index.html --out-dir ./dist",
     "start": "npx parcel src/index.html --out-dir ./dist",
     "docker:build": "docker build -t starter-kit .",
-    "docker:run": "docker run --name starter-kit -p 8080:80 --rm starter-kit"
+    "docker:run": "docker run --name starter-kit -p 8080:80 --rm starter-kit",
+    "hyper:setup": "./scripts/hyper/setup.sh",
+    "deploy": "./scripts/hyper/deploy.sh"
   },
   "husky": {
     "hooks": {
