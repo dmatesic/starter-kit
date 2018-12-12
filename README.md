@@ -50,7 +50,7 @@ npm start
 
 Navigate to http://localhost:1234
 
-### Docker
+#### Docker
 
 ```
 npm run build
@@ -59,6 +59,33 @@ npm run docker:run
 ```
 
 Navigate to http://localhost:8080
+
+### Deploy
+
+#### With Hyper
+
+> As a serverless container hosting service, [Hyper](https://www.hyper.sh/) allows you to run containers without having to manage VMs or clusters
+
+```diff
++ Very easy to setup and deploy
++ Reasonable pricing
+- No free tier
+- Not as popular as Heroku or Digital Ocean
+```
+
+Create an account:
+
+1. Sign up for an account
+1. Add a credit card to file
+1. Go through the 3 step setup process
+
+Setup
+
+`npm run hyper:setup`
+
+Deploy again:
+
+`npm run deploy`
 
 ## License
 
