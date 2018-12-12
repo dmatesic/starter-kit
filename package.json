@@ -5,7 +5,9 @@
   "scripts": {
     "prebuild": "rm -rf dist",
     "build": "npx parcel build src/index.html --out-dir ./dist",
-    "start": "npx parcel src/index.html --no-cache --out-dir ./dist"
+    "start": "npx parcel src/index.html --out-dir ./dist",
+    "docker:build": "docker build -t starter-kit .",
+    "docker:run": "docker run --name starter-kit -p 8080:80 --rm starter-kit"
   },
   "husky": {
     "hooks": {

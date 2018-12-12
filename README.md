@@ -17,6 +17,8 @@ Fork this repo as a starting point for side projects, hackathons, etc. Decisions
 
 ### Tooling
 
+- [Docker](https://www.docker.com/): computer program that performs operating-system-level virtualization, also known as "containerization"
+- [nginx](https://www.nginx.com/): web server which can also be used as a reverse proxy, load balancer, mail proxy and HTTP cache
 - [Parcel](https://parceljs.org/): blazing fast, zero configuration web application bundler
 - [PostCSS](https://github.com/postcss/postcss): tool for transforming styles with JS plugins
 - [Prettier](https://prettier.io/): opinionated code formatter
@@ -38,13 +40,25 @@ Fork this repo as a starting point for side projects, hackathons, etc. Decisions
 2. Update configuration:
   - Set `editor.formatOnSave` to true in settings to automatically format files (with prettier) on save.
 
-### Build
+### Build and Run
 
-`npm run build`
+#### Local Development w/ LiveReload
 
-### Run
+```
+npm start
+```
 
-`npm start`
+Navigate to http://localhost:1234
+
+### Docker
+
+```
+npm run build
+npm run docker:build
+npm run docker:run
+```
+
+Navigate to http://localhost:8080
 
 ## License
 

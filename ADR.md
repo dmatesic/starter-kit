@@ -26,3 +26,7 @@ Parcel is zero-config and has native support for a ton of things out of the box.
 # 005: Use Google Sheets as a data store w/ tabletop library
 
 Google Sheets is free, easy to setup, and includes a data editing GUI and access management. For most side projects (that don't have a complex data model or millions of records), Google Sheets works just fine. Insipred by [this article](https://medium.freecodecamp.org/get-sheet-done-using-google-spreadsheets-as-your-data-backend-650ba23dc6d9), but decided to use tabletop because it's more mature.
+
+# 006: Use Docker and nginx to package and serve the app
+
+Docker will make deployments easier and less dependent on the hosting service. nginx is a popular web server and requires no configuration with Docker.
