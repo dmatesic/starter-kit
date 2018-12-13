@@ -5,7 +5,7 @@ export default ({ institutions }) => {
     <div>
       {institutions.map((institution) => {
         return (
-          <div class="pb-2 mb-2 border-b">
+          <div id={`institution-${institution.id}`} class="pb-2 mb-2 border-b">
             <div>
               <span class="font-bold">{institution.name}</span> {institution.nickname}
             </div>
