@@ -24,6 +24,10 @@ Fork this repo as a starting point for side projects, hackathons, etc. Decisions
 - [Prettier](https://prettier.io/): opinionated code formatter
 - [huksy](https://github.com/typicode/husky): git hooks made easy
 
+### Testing
+
+- [cypress](https://www.cypress.io/): Fast, easy and reliable testing for anything that runs in a browser. Install Cypress in seconds and take the pain out of front-end testing.
+
 ## How do I use it?
 
 ### Install
@@ -60,6 +64,11 @@ npm run docker:run
 
 Navigate to http://localhost:8080
 
+### Test
+
+Open cypress GUI: `npx cypress open`
+Run end-to-end suite: `npm run test:integration`
+
 ### Deploy
 
 #### With Hyper
@@ -79,13 +88,8 @@ Create an account:
 1. Add a credit card to file
 1. Go through the 3 step setup process
 
-Setup
-
-`npm run hyper:setup`
-
-Deploy again:
-
-`npm run deploy`
+Setup: `npm run hyper:setup`
+Deploy: `npm run deploy`
 
 ## License
 
