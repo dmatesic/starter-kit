@@ -9,6 +9,10 @@ Fork this repo as a starting point for side projects, hackathons, etc. Decisions
 - [Hyperapp](https://github.com/jorgebucaran/hyperapp): 1 kB JavaScript micro-framework for building declarative web applications
 - [Tailwind CSS](https://tailwindcss.com): utility-first CSS framework for rapidly building custom user interfaces
 
+### Server
+
+- [Node.js](https://nodejs.org): Node.js® is a JavaScript runtime built on Chrome's V8 JavaScript engine
+- [Restify](http://restify.com): A Node.js web service framework optimized for building semantically correct RESTful web services ready for production use at scale.
 
 ### Database
 
@@ -39,20 +43,23 @@ Fork this repo as a starting point for side projects, hackathons, etc. Decisions
 ### Setup VS Code
 
 1. Install extensions:
-  - [Tailwind CSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss)
-  - [Prettier Now](https://marketplace.visualstudio.com/items?itemName=remimarsal.prettier-now)
+
+- [Tailwind CSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss)
+- [Prettier Now](https://marketplace.visualstudio.com/items?itemName=remimarsal.prettier-now)
+
 2. Update configuration:
-  - Set `editor.formatOnSave` to true in settings to automatically format files (with prettier) on save.
+
+- Set `editor.formatOnSave` to true in settings to automatically format files (with prettier) on save.
 
 ### Build and Run
 
 #### Local Development w/ LiveReload
 
 ```
-npm start
+npm run local-dev
 ```
 
-Navigate to http://localhost:1234
+Navigate to http://localhost:3000
 
 #### Docker
 
@@ -66,8 +73,8 @@ Navigate to http://localhost:8080
 
 ### Test
 
-Open cypress GUI: `npx cypress open`
-Run end-to-end suite: `npm run test:integration`
+Open cypress GUI: `npx cypress open`  
+Run end-to-end suite: `npm run test:e2e`
 
 ### Deploy
 
@@ -88,7 +95,7 @@ Create an account:
 1. Add a credit card to file
 1. Go through the 3 step setup process
 
-Setup: `npm run hyper:setup`
+Setup: `npm run hyper:setup`  
 Deploy: `npm run deploy`
 
 ## License

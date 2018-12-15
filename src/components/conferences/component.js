@@ -3,9 +3,12 @@ import { h } from 'hyperapp';
 export default ({ conferences, selectedConference, setSelectedConference }) => {
   return (
     <div>
-      {conferences.map((conference) => {
+      {conferences.map(conference => {
         return (
-          <a id={`conference-${conference.id}`} onclick={() => setSelectedConference(conference.id)}>
+          <a
+            id={`conference-${conference.id}`}
+            onclick={() => setSelectedConference(conference.id)}
+          >
             <div
               class={`py-2 px-4 mb-2 border border-grey border-solid rounded cursor-pointer hover:bg-grey-lighter
 					${selectedConference === conference.id && 'bg-grey-lighter'}`}

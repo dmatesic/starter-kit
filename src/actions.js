@@ -1,16 +1,38 @@
-import DataAccess from './lib/data-access';
+import merge from 'deepmerge';
+import axios from 'axios';
+
+// TODO: Add config and get this working both locally and on server
+const api = axios.create({
+  baseURL: 'http://localhost:3001',
+  timeout: 5000
+});
 
 const actions = {
-  fetchData: () => async (_, actions) => {
-    const dataAccess = new DataAccess();
-    await dataAccess.init();
-    actions.fetchDataSuccess(dataAccess);
+  fetchEntity: entity => async (_, actions) => {
+    actions.updateCommunicationStatus({ entity, status: 'requested' });
+    api
+      .get(`/${entity}`)
+      .then(res => actions.fetchEntitySuccess({ entity, data: res.data }))
+      .catch(error => actions.fetchEntityError({ entity, error }));
   },
-  fetchDataSuccess: (dataAccess) => () => {
-    return { dataAccess };
+  updateCommunicationStatus: ({ entity, status }) => state => {
+    return merge(state, { communication: { status: { [entity]: status } } });
   },
-  setSelectedConference: (selectedConference) => () => {
-    return { selectedConference };
+  fetchEntitySuccess: ({ entity, data }) => state => {
+    return merge(state, {
+      data: { [entity]: data },
+      communication: { status: { [entity]: 'success' } }
+    });
+  },
+  fetchEntityError: ({ entity, error }) => state => {
+    console.error(error);
+    return merge(state, {
+      data: { [entity]: [] },
+      communication: { status: { [entity]: 'error' } }
+    });
+  },
+  setSelectedConference: selectedConference => state => {
+    return merge(state, { control: { selectedConference } });
   }
 };
 

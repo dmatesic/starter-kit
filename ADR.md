@@ -34,3 +34,7 @@ Docker will make deployments easier and less dependent on the hosting service. n
 # 007: Use cypress for end-to-end tests
 
 Even for short-lived projects, end-to-end tests can provide a high return on investment. They are fairly easy to write/maintain/run with cypress and provide a high level of confidence as you build out and refactor your app.
+
+# 008: Use Node.js with Restify
+
+Node.js is the standard server language to use for short-lived projects, and Restify is a good middleground between using low-level Node.js https and a more fully-featured framework.
