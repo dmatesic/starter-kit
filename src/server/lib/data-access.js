@@ -4,12 +4,8 @@ import { NotFoundError, InternalServerError } from 'restify-errors';
 
 const DOC_ID = '1B_J3laBaCbg5HgxQGd-fnF7DvTOMwSN37PUlr1FgeyI';
 
-export function get(entity, query) {
-  return load(entity).then(data => filter(data, query || (() => true)));
-}
-
-export function getOne(entity, query) {
-  return load(entity).then(data => find(data, query || (() => true)));
+export function get(entity, matches) {
+  return load(entity).then(data => filter(data, matches || (() => true)));
 }
 
 function load(entity) {
