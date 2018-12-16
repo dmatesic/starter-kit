@@ -3,7 +3,7 @@ import axios from 'axios';
 
 // TODO: Add config and get this working both locally and on server
 const api = axios.create({
-  baseURL: 'http://localhost:3001',
+  baseURL: 'http://localhost:3001/api',
   timeout: 5000
 });
 
